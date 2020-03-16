@@ -21705,8 +21705,94 @@ header {
             .page .bcrumbs .links ul li a i {
               margin-left: 10px; }
 
-.bg-path, .page-enlilyapi #hakkimizda {
+.bg-path, .page-faaliyet #faaliyetler .faaliyet-item .row .img:after, .page-enlilyapi #hakkimizda {
   background-image: url(../img/bg-path.png); }
+
+.page-faaliyet #faaliyetler {
+  padding: 50px 0px; }
+  .page-faaliyet #faaliyetler .faaliyet-item {
+    margin-top: 80px; }
+    .page-faaliyet #faaliyetler .faaliyet-item .row .text {
+      position: relative;
+      z-index: 2; }
+      .page-faaliyet #faaliyetler .faaliyet-item .row .text .title {
+        position: relative;
+        font-size: 25px;
+        margin-bottom: 30px; }
+        .page-faaliyet #faaliyetler .faaliyet-item .row .text .title:before {
+          content: '';
+          width: 60px;
+          height: 2px;
+          background-color: #e9a61e;
+          position: absolute;
+          bottom: 15px;
+          left: -80px; }
+      .page-faaliyet #faaliyetler .faaliyet-item .row .text .body {
+        padding: 30px;
+        background: #fff;
+        -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+                box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+        width: calc(100% + 200px); }
+    .page-faaliyet #faaliyetler .faaliyet-item .row .img {
+      position: relative; }
+      .page-faaliyet #faaliyetler .faaliyet-item .row .img img {
+        width: 100%; }
+      .page-faaliyet #faaliyetler .faaliyet-item .row .img:after {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: calc(100% + 100px);
+        right: -50px;
+        top: -50px; }
+    .page-faaliyet #faaliyetler .faaliyet-item.left .row {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+          -ms-flex-flow: row-reverse;
+              flex-flow: row-reverse;
+      text-align: right; }
+      .page-faaliyet #faaliyetler .faaliyet-item.left .row .title {
+        display: inline-block;
+        padding-right: 15px; }
+      .page-faaliyet #faaliyetler .faaliyet-item.left .row .body {
+        position: relative;
+        left: -200px;
+        text-align: left; }
+
+.page-faaliyet #ask {
+  color: #fff;
+  background-image: url(../img/bg-ask.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 100px 0px; }
+  .page-faaliyet #ask .main-title {
+    margin-bottom: 150px; }
+
+.page-faaliyet #neler {
+  padding: 100px 0px; }
+  .page-faaliyet #neler .faa-item {
+    margin-top: 30px;
+    display: block;
+    text-decoration: none; }
+    .page-faaliyet #neler .faa-item img {
+      margin-bottom: 30px;
+      width: 100%; }
+    .page-faaliyet #neler .faa-item h1 {
+      text-align: center;
+      font-size: 20px;
+      color: #343a40;
+      font-weight: bold; }
+      .page-faaliyet #neler .faa-item h1:before {
+        -webkit-transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out;
+        content: '';
+        width: 60px;
+        height: 2px;
+        background-color: #e9a61e;
+        position: absolute;
+        bottom: -20px;
+        left: calc(50% - 40px); }
+    .page-faaliyet #neler .faa-item:hover h1:before {
+      bottom: 0px; }
 
 .page-enlilyapi #hakkimizda {
   padding: 100px 0px; }
