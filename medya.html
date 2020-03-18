@@ -63,8 +63,8 @@
       </div>
    </div>
 </header>
-<div class="page page-haberdetay">
-   <div class="bcrumbs" style="background-image: url(assets/img/proje-1.png)">
+<div class="page page-medya">
+   <div class="bcrumbs" >
       <h1>ENLİL YAPI</h1>
       <div class="links">
          <div class="container">
@@ -75,31 +75,39 @@
          </div>
       </div>
    </div>
-   <div id="hdetay" class="popup-gallery">
+   <div id="medya-wrap" class="">
       <div class="container">
-         <div class="row">
-            <div class="col-md-6 haber-det">
-               <div class="row">
-                  <div class="col-12">
-                     <div class="tarih">
-                        01, Ocak 2020
-                     </div>
-                     <h1>A Projesi</h1>
-                  </div>
-                  <div class="col-12 mt-2 mb-2">
-                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa deserunt distinctio earum eligendi esse eum hic illo inventore iure molestiae nisi perferendis quis rem repellendus sunt, tempora voluptate voluptates!
-                     <br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa deserunt distinctio earum eligendi esse eum hic illo inventore iure molestiae nisi perferendis quis rem repellendus sunt, tempora voluptate voluptates!
-                  </div>
+         <div class="row ">
+            <div class="col-12 text-center">
+               <div class="bg mb-5">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium adipisci architecto asperiores at, consequatur dolorem ducimus, eaque eos eum magnam maiores maxime neque odio, praesentium quas quis sit voluptas!
                </div>
             </div>
-            <div class="col-md-6 haber-img">
-               <a href="" class="img-w">
-                  <img src="assets/img/danismanw-1.jpg" alt="">
+            <div class="col-md-4 popup-gallery">
+               <a href="assets/img/danisman-1.jpg" class="medya-item " title="başlık">
+                  <span class="type">Video</span>
+                  <i class="fa fa-arrow-right"></i>
+                  <img src="assets/img/danisman-1.jpg" alt="">
+                  <h1>Kurumsal Katalog</h1>
                </a>
             </div>
-            <div class="col-md-12 h-detay-more">
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias aliquid amet at consectetur cumque cupiditate, deleniti doloremque est, excepturi inventore odio quasi quo sequi velit, voluptate voluptates! Quidem, sequi!
+            <div class="col-md-4 popup-gallery">
+               <a href="assets/img/danismanw-1.jpg" class="medya-item " title="başlık">
+                  <span class="type">Video</span>
+                  <i class="fa fa-arrow-right"></i>
+                  <img src="assets/img/danismanw-1.jpg" alt="">
+                  <h1>Kurumsal Katalog</h1>
+               </a>
             </div>
+            <div class="col-md-4">
+               <a href="https://www.youtube.com/watch?v=PUdyuKaGQd4" class="medya-item popup-youtube" title="başlık">
+                  <span class="type">Video</span>
+                  <i class="fa fa-arrow-right"></i>
+                  <img src="assets/img/danisman-1.jpg" alt="">
+                  <h1>Kurumsal Katalog</h1>
+               </a>
+            </div>
+            
          </div>
       </div>
    </div>
@@ -216,6 +224,7 @@
 <script src="assets/js/theme.js"></script>
 <script>
     $(document).ready(function() {
+
         $('.popup-gallery').magnificPopup({
             delegate: 'a',
             type: 'image',
@@ -225,13 +234,30 @@
                 enabled: true,
                 navigateByImgClick: true,
                 preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+            },  callbacks: {
+
+                buildControls: function() {
+                    // re-appends controls inside the main container
+                    this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+                }
+
             },
             image: {
                 titleSrc: function(item) {
-                    return item.el.attr('title') ;
+                  return item.el.attr('title') ;
                 }
             }
-            
+
+        });
+
+        $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+            disableOn: 700,
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 160,
+            preloader: false,
+
+            fixedContentPos: false
         });
     });
 </script></body>
