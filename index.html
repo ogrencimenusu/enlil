@@ -20,6 +20,7 @@
 </head>
 
 <body class="">
+
 <header>
    <div class="container">
       <div class="row header-wrap">
@@ -486,8 +487,31 @@
 <!-- endbuild -->
 
 <script src="assets/js/theme.js"></script>
-<script>
 
+<div id="modal-giris" data-backdrop="static" class="modal" tabindex="-1" role="dialog">
+   <div class="container modal-dialog-centered">
+     <div class="row w-100 text-center">
+        <div class="col-12">
+           <a class="navbar-brand" href="#">
+              <img src="assets/img/logo.png" alt="">
+           </a>
+        </div>
+        <div class="col-12">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/emnTTyN1Mdc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+   
+        <div class="col-12">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              <i class="fa fa-arrow-right"></i>Siteye Giriş
+           </button>
+        </div>
+     </div>
+   </div>
+</div>
+
+
+<script>
+    $('#modal-giris').modal('show');
 </script>
 </body>
 </html>

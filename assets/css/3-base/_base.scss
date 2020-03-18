@@ -1097,6 +1097,39 @@ header{
     right: 0;
   }
 }
+#modal-giris{
+  background: $black;
+  padding: 20px 0px;
+  @include esm{
+    .row{
+      margin: unset;
+    }
+  }
+  a.navbar-brand{
+    margin: 0;
+    img{
+      max-width: 300px;
+    }
+  }
+  iframe{
+    width: 100%;
+    max-width: 500px;
+    margin: 50px 0px;
+    border: 1px solid $dark;
+  }
+  .btn{
+    background: $dark;
+    color: $primary;
+    padding: 15px 30px;
+    &:hover{
+      background: $primary;
+      color: $dark;
+    }
+    i{
+      margin-right: 15px;
+    }
+  }
+}
 .mfp-container{
   @include esm{
     overflow: hidden;
