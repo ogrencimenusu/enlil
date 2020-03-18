@@ -1076,12 +1076,282 @@ header{
     }
   }
 }
+.mfp-counter{
+  display: none;
+}
+.mfp-title{
+  position: relative;
+  top: -50px;
+  padding-left: 60px;
+  font-weight: 500 ;
+
+  &:before{
+    content: '';
+    width: 1px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    background: $primary;
+  }
+}
 .bg-path{
   background-image: url(../img/bg-path.png);
 }
+.page-haberdetay{
+  #hdetay{
+    overflow: hidden;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .haber-img{
+      width: 100%;
+      padding-right: 100px;
+      @include esm{ padding-right: 0;}
+      @include sm{ padding-right: 0;}
+      a{
+        display: block;
+        img{
+          object-fit: cover;
+          width:calc( 100% + 200px);
+          @include esm{ width: 100%;}
+          @include sm{ width: 100%;}
+        }
+      }
+    }
+    .container{
+
+      @extend .bg-path;
+      .haber-det{
+        .row{
+          margin-bottom: 50px;
+          h1{
+            position: relative;
+            margin-bottom: 30px;
+            font-size: 30px;
+            &:before{
+              width: 60px;
+              height: 2px;
+              background: $primary;
+              content: '';
+              position: absolute;
+              bottom: -20px;
+              left: 0;
+            }
+          }
+          .tarih{
+             background: $dark;
+            color: $white;
+            display: inline-block;
+            position: relative;
+            left: 0px;
+            top: -44px;
+            padding: 5px 15px;
+
+          }
+          box-shadow: $box-shadow-lg;
+          padding: 30px ;
+          background: $white;
+          position: relative;
+          left: 60px;
+          top: 60px;
+          z-index: 1;
+          @include esm{
+            top: unset;
+            left: unset;
+          }
+          @include sm{
+            top: unset;
+            left: unset;
+          }
+        }
+      }
+
+      .h-detay-more{
+        margin-top: 30px;
+        background: $white;
+        padding-top: 50px;
+      }
+
+    }
+  }
+}
+.page-projedetay{
+  #pdetay{
+    overflow: hidden;
+    padding-top: 50px;
+  }
+  .proje-ekdetay{
+    margin-top: -50px;
+    @include sm{ margin-top: 0px;}
+    @include esm{ margin-top: 0px;}
+    .proje-text{
+      padding-top: 150px;
+      @include sm{ padding-top: 10px; margin-bottom: 15px;}
+      @include esm{ padding-top: 10px; margin-bottom: 15px;}
+    }
+
+    .p-ekimg{
+      left: -150px;
+      @include sm{ left: 0}
+      @include esm{ left: 0}
+      a{
+        position: relative;
+        display: block;
+        &:before{
+          content: '';
+          position: absolute;
+          background: $primary;
+          width: 200px;
+          height: 2px;
+          right: -200px;
+          top: 100px;
+        }
+        img{
+          width: calc(100% + 150px);
+          @include sm{ width: 100%}
+          @include esm{ width: 100%}
+        }
+      }
+    }
+    &.right{
+      .row{
+        flex-flow: row-reverse;
+        @include sm{
+          flex-flow: wrap;
+        }
+        @include esm{
+          flex-flow: wrap;
+        }
+        .p-ekimg{
+          left: unset;
+          a{
+            &:after{
+              content: '';
+              position: absolute;
+              background: $primary;
+              width: 2px;
+              height: 200px;
+              left: -30px;
+              top: -100px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .proje-det{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    h1{
+      font-size: 30px;
+      margin-bottom: 50px;
+    }
+    span{
+      display: block;
+      width: 100%;
+      font-weight: bold;
+    }
+    span.mens{
+      opacity: .5;
+      font-weight: 500;
+    }
+    span.det{
+      margin-bottom: 20px;
+    }
+  }
+  .img-w{
+    img{
+      margin-top: 20px;
+      width: calc(100% + 150px);
+      @include sm{ width: 100%}
+      @include esm{ width: 100%}
+    }
+  }
+}
+.page-projeliste{
+  #projeler{
+    padding: 50px 0px;
+    @include esm{
+      overflow: hidden;
+    }
+    .proje-item{
+      margin-top: 80px;
+      .row{
+        .text{
+          position: relative;
+          z-index: 2;
+          text-align: right;
+          @include esm{
+            padding: 20px 30px;
+          }
+          .title{
+            position: relative;
+            font-size: 25px;
+            margin-bottom: 30px;
+            margin-top: 50px;
+            small{
+              display: block;
+              color: $primary;
+            }
+          }
+          .body{
+            font-size: 14px;
+            color: $gray-600;
+
+            a{
+              display: block;
+              margin-top: 15px;
+            }
+            @include sm{
+              width: 100%;
+              margin-bottom: 15px;
+            }
+            @include esm{
+              width: 100%;
+              margin-bottom: 15px;
+            }
+          }
+        }
+        .img{
+          position: relative;
+          img{
+            width: 100%;
+          }
+        }
+      }
+      &.left{
+        .row{
+          flex-flow: row-reverse;
+
+          @include sm{
+            flex-flow: wrap;
+          }
+          @include esm{
+            flex-flow: wrap;
+          }
+          .title{
+            text-align: left;
+            width: 100%;
+
+          }
+          .body{
+            position: relative;
+            text-align: left;
+
+          }
+        }
+      }
+    }
+  }
+}
 .page-faaliyet{
+
  #faaliyetler{
    padding: 50px 0px;
+   @include esm{
+     overflow: hidden;
+   }
    .faaliyet-item{
      margin-top: 80px;
      .row{
@@ -1107,6 +1377,14 @@ header{
            background: $white;
            box-shadow: $box-shadow-lg;
            width: calc(100% + 200px);
+           @include sm{
+             width: 100%;
+             margin-bottom: 15px;
+           }
+           @include esm{
+             width: 100%;
+             margin-bottom: 15px;
+           }
          }
        }
        .img{
@@ -1130,6 +1408,12 @@ header{
        .row{
          flex-flow: row-reverse;
          text-align: right;
+         @include sm{
+           flex-flow: wrap;
+         }
+         @include esm{
+           flex-flow: wrap;
+         }
          .title{
            display: inline-block;
            padding-right: 15px;
@@ -1138,6 +1422,12 @@ header{
            position: relative;
            left:-200px;
            text-align: left;
+           @include sm{
+             left: unset;
+           }
+           @include esm{
+             left: unset;
+           }
          }
        }
      }
